@@ -1,25 +1,14 @@
-def commonwords(sent1, sent2):
-    sen1 = set(sent1)
-    sen2 = set(sent2)
-    common = list(sen1.intersection(sen2))
-    return common
-def removecommonwords(sent1, sent2):
-    sentence1 = list(sent1.split())
-    sentence2 = list(sebt2.split())
-    commonlist = commonwords(sentence1,
-                             sentence2)
-    word = 0
-    for i in range(len(setence)):
-        if setence1[word] in commonlist:
-            setence1.pop(word)
-            word = word - 1
-    word = 0
-    for i in range(len(sentence2)):
-        if setennce2[word] in commonlist:
-            sentence2.pop(word)
-            word = word - 1
-        word += 1
-    print(*sentence1)
-    print(*sentence2)
-s1 = "sky is blue in color"
-s2 = "raj likes sky blue color"
+import operator as op
+def removeCommonWords(sent1,sent2):
+  com=[]
+  sent1=list(sentence1.split())
+  sent2=list(sentence2.split())
+  for i in sent1:
+    if op.countOf(sent2,i)>0:
+      sent1.remove(i)
+      sent2.remove(i)
+  print(*sent1)
+  print(*sent2)
+sentence1 = "sky is blue in color"
+sentence2 = "raj likes sky blue color"
+removeCommonWords(sentence1,sentence2)

@@ -1,12 +1,12 @@
-def isNumeric(s):
-    s = s.strip()
+def isnumeric(s):
+    s=s.strip()
     try:
-        s = float(s)
+        s=float(s)
         return True
     except:
         return False
-print(isNumeric("0.2"))
-print(isNumeric("xyz"))
-print(isNumeric("Hello"))
-print(isNumeric("-2.5"))
-print(isNumeric("10"))
+print(isnumeric("0"))
+print(isnumeric("e"))
+print(isnumeric(""))
+print(isnumeric("."))
+print(isnumeric("%"))
